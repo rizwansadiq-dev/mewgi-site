@@ -189,23 +189,6 @@
 .game-name{font-size:18px;font-weight:800;color:#fff;margin-bottom:7px;letter-spacing:-.3px}
 .game-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .game-foot{display:flex;align-items:center;justify-content:space-between}
-/* ABOUT */
-.about-section{background:var(--bg2);padding:100px 56px}
-.services-header{max-width:600px;margin:0 auto;text-align:center}
-.services-header .sec-title{margin-bottom:16px}
-.services-header .sec-sub{max-width:100%;margin-bottom:0}
-.services-grid{
-  max-width:1080px;margin:48px auto 0;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-}
-.service-card{
-  background:var(--card);border-radius:16px;border:1px solid var(--border);
-  padding:36px 28px;text-align:center;transition:border-color .2s,transform .2s;
-}
-.service-card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-4px)}
-.p-icon{width:48px;height:48px;border-radius:12px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:22px}
-.p-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
-.p-text{font-size:13px;color:var(--muted);line-height:1.65}
 /* VALUES */
 .values-section{padding:100px 56px;max-width:1200px;margin:0 auto}
 .values-header{text-align:center}
@@ -238,8 +221,6 @@
 @media(max-width:860px){
   .games-preview{padding:72px 20px}
   .games-grid{grid-template-columns:1fr}
-  .about-section{padding:72px 20px}
-  .services-grid{grid-template-columns:1fr}
   .values-section{padding:72px 20px}
   .values-grid{grid-template-columns:1fr 1fr}
   .cta-wrap{padding:0 20px 72px}
@@ -261,6 +242,7 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="games.html">Games</a></li>
+    <li><a href="services.html">Services</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
@@ -272,6 +254,7 @@
 <ul class="mobile-menu" id="mobile-menu">
   <li><a href="index.html" class="ml">Home</a></li>
   <li><a href="games.html" class="ml">Games</a></li>
+  <li><a href="services.html" class="ml">Services</a></li>
   <li><a href="index.html#about" class="ml">About</a></li>
   <li><a href="index.html#contact" class="ml">Contact</a></li>
   <li><a href="index.html#contact" class="nav-cta ml">Get in Touch</a></li>
@@ -290,6 +273,7 @@
     <a href="#about" class="btn-ghost">Learn About Us</a>
   </div>
   <div class="hero-stats">
+    <div class="hero-stat"><div class="n" data-target="100" data-suffix="+">0</div><div class="l">Games</div></div>
     <div class="hero-stat"><div class="n" data-target="500" data-suffix="K+">0</div><div class="l">Downloads</div></div>
     <div class="hero-stat"><div class="n" data-target="4.7" data-suffix="★" data-decimal="1">0</div><div class="l">Avg. Rating</div></div>
     <div class="hero-stat"><div class="n" data-target="15" data-suffix="+">0</div><div class="l">Countries</div></div>
@@ -372,34 +356,8 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<div class="about-section" id="about">
-  <div class="services-header">
-    <div class="sec-eyebrow">What We Offer</div>
-    <div class="sec-title">Our Services</div>
-    <p class="sec-sub">Mewgi offers full-cycle mobile game production, from concept to launch. Whether you need a dedicated team or specialized support, we bring the craft to make it feel right.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="p-icon" style="background:rgba(139,92,246,.12)">🎮</div>
-      <div class="p-title">Game Development</div>
-      <div class="p-text">Full-cycle mobile game development, from prototype to live-ops, built on proven engines and pipelines.</div>
-    </div>
-    <div class="service-card">
-      <div class="p-icon" style="background:rgba(34,211,238,.1)">🧱</div>
-      <div class="p-title">3D Modeling</div>
-      <div class="p-text">Optimized, production-ready 3D assets (characters, environments, and props) built for mobile performance.</div>
-    </div>
-    <div class="service-card">
-      <div class="p-icon" style="background:rgba(251,191,36,.1)">🎨</div>
-      <div class="p-title">2D Art & Animation</div>
-      <div class="p-text">UI, illustrations, sprite work, and animation that bring games to life with a distinct visual identity.</div>
-    </div>
-  </div>
-</div>
-
 <!-- VALUES -->
-<section class="values-section">
+<section class="values-section" id="about">
   <div class="values-header">
     <div class="sec-eyebrow">Our DNA</div>
     <div class="sec-title">How we build</div>
@@ -433,6 +391,7 @@
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="games.html">Games</a>
+    <a href="services.html">Services</a>
     <a href="index.html#about">About</a>
     <a href="index.html#contact">Contact</a>
   </div>
