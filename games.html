@@ -68,7 +68,7 @@
 
 /* PAGE HEADER */
 .page-hero{
-  padding:80px 56px 64px;text-align:center;position:relative;overflow:hidden;
+  padding:80px 56px 110px;text-align:center;position:relative;overflow:hidden;
   border-bottom:1px solid var(--border);
 }
 .page-hero::before{
@@ -123,6 +123,24 @@
 @media (prefers-reduced-motion: reduce){
   .hero-stars::before,.hero-stars::after,.shooting-star{animation:none}
 }
+.gb-rows{
+  position:absolute;top:-5%;right:-10%;bottom:-25%;left:-10%;z-index:0;
+  display:flex;flex-direction:column;justify-content:center;gap:18px;
+  transform:rotate(-8deg) scale(1.2);
+}
+.gb-row{display:flex;gap:18px;width:max-content;animation:gb-scroll 50.4s linear infinite;will-change:transform;backface-visibility:hidden}
+.gb-row.rev{animation-direction:reverse;animation-duration:60s}
+.gb-row img{
+  width:76px;height:76px;border-radius:18px;object-fit:cover;flex-shrink:0;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:.5;
+  border:1px solid rgba(255,255,255,.1);
+}
+@keyframes gb-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.gb-fade{
+  position:absolute;inset:0;z-index:0;
+  background:radial-gradient(ellipse 60% 75% at 50% 40%,rgba(10,10,15,.25) 0%,rgba(10,10,15,.8) 60%,rgba(10,10,15,.96) 100%);
+}
+@media (prefers-reduced-motion: reduce){.gb-row{animation:none}}
 .page-hero-eyebrow{
   font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
   color:#a78bfa;margin-bottom:14px;position:relative;z-index:1;
@@ -196,7 +214,8 @@
 .games-cta h2{font-size:clamp(22px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:14px}
 .games-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7}
 @media(max-width:860px){
-  .page-hero{padding:60px 20px 48px}
+  .page-hero{padding:60px 20px 80px}
+  .gb-row img{width:56px;height:56px;border-radius:14px}
   .games-list{padding:48px 20px}
   .games-grid{grid-template-columns:1fr}
   .games-cta{padding:60px 20px}
@@ -239,6 +258,21 @@
     <span class="shooting-star"></span>
     <span class="shooting-star"></span>
   </div>
+  <div class="gb-rows">
+    <div class="gb-row">
+      <img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt="">
+      <img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gb-row rev">
+      <img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt="">
+      <img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="gb-row">
+      <img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt="">
+      <img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true">
+    </div>
+  </div>
+  <div class="gb-fade"></div>
   <div class="page-hero-eyebrow">🐾 Mewgi Game Portfolio</div>
   <h1>Our Games</h1>
   <p>Every game we make is crafted with care, tested relentlessly, and built to keep players coming back.</p>

@@ -169,11 +169,38 @@
 .services-cta h2{font-size:clamp(22px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:14px}
 .services-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7}
 .services-cta .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* CLIENTS */
+.clients-section{background:var(--bg2);border-top:1px solid var(--border);padding:80px 0;overflow:hidden}
+.clients-header{max-width:600px;margin:0 auto;text-align:center;padding:0 56px}
+.clients-header .sec-eyebrow{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#a78bfa;margin-bottom:12px}
+.clients-title{font-size:clamp(22px,3vw,34px);font-weight:900;color:#fff;letter-spacing:-1px}
+.clients-track-wrap{
+  margin-top:48px;position:relative;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);
+}
+.clients-track{
+  display:flex;align-items:center;gap:64px;width:max-content;
+  animation:clients-marquee 26.4s linear infinite;
+  will-change:transform;backface-visibility:hidden;
+}
+.clients-track-wrap:hover .clients-track{animation-play-state:paused}
+.client-logo{
+  width:101px;height:101px;object-fit:cover;border-radius:18px;
+  border:1px solid var(--border);flex-shrink:0;
+}
+@keyframes clients-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media (prefers-reduced-motion: reduce){
+  .clients-track{animation:none}
+}
 @media(max-width:860px){
   .page-hero{padding:60px 20px 48px}
   .services-list{padding:48px 20px}
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .services-cta{padding:60px 20px}
+  .clients-header{padding:0 20px}
+  .client-logo{width:77px;height:77px}
+  .clients-track{gap:40px}
 }
 @media(max-width:480px){
   .services-grid{grid-template-columns:1fr}
@@ -263,6 +290,43 @@
       <div class="p-icon" style="background:rgba(244,114,182,.12)">🧭</div>
       <div class="p-title">Game UI & UX</div>
       <div class="p-text">Clean, intuitive interfaces and player flows that make games feel polished, responsive, and easy to pick up.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENTS -->
+<div class="clients-section">
+  <div class="clients-header">
+    <div class="sec-eyebrow">Trusted By</div>
+    <h2 class="clients-title">Studios We've Worked With</h2>
+  </div>
+  <div class="clients-track-wrap">
+    <div class="clients-track">
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="Homa Games">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="Azur Games">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="Appcentral">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="Voodoo">
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="Homa Games">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="Azur Games">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="Appcentral">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="Voodoo">
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="Homa Games">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="Azur Games">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="Appcentral">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="Voodoo">
+      <!-- duplicate set for seamless loop -->
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/homa.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/azurgames.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/appcentral.jpg" alt="" aria-hidden="true">
+      <img class="client-logo" src="assets/clients/voodoo.jpg" alt="" aria-hidden="true">
     </div>
   </div>
 </div>
