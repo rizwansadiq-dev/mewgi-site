@@ -17,7 +17,15 @@
       --text:#f1f0f5;--muted:#8b8a9e;
       --font:'Segoe UI',system-ui,-apple-system,sans-serif;
     }
-    body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+    body{
+      font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;
+      background-image:
+        radial-gradient(ellipse 900px 700px at 8% 0%, rgba(139,92,246,.11), transparent 60%),
+        radial-gradient(ellipse 900px 700px at 100% 35%, rgba(34,211,238,.08), transparent 60%),
+        radial-gradient(ellipse 800px 650px at 12% 100%, rgba(139,92,246,.07), transparent 60%);
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
     nav{
       position:sticky;top:0;z-index:200;
       background:rgba(10,10,15,0.85);
@@ -49,7 +57,7 @@
     .mobile-menu a{color:#fff;text-decoration:none;font-size:22px;font-weight:700}
     .site-footer{
       border-top:1px solid var(--border);padding:40px 56px;
-      max-width:1200px;margin:0 auto;
+      max-width:1320px;margin:0 auto;
       display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;
     }
     .footer-brand{display:flex;align-items:center;gap:10px}
@@ -154,7 +162,7 @@
   margin:0 auto;line-height:1.75;position:relative;z-index:1;
 }
 /* GAMES LIST */
-.games-list{max-width:1200px;margin:0 auto;padding:72px 56px}
+.games-list{max-width:1320px;margin:0 auto;padding:72px 56px}
 .games-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:20px;row-gap:40px}
 .game-card{
   background:var(--card);border:1px solid var(--border);border-radius:20px;
@@ -212,13 +220,18 @@
   padding:80px 56px;text-align:center;
 }
 .games-cta h2{font-size:clamp(22px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:14px}
-.games-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7}
+.games-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7;max-width:460px;margin-left:auto;margin-right:auto}
 @media(max-width:860px){
   .page-hero{padding:60px 20px 80px}
   .gb-row img{width:56px;height:56px;border-radius:14px}
   .games-list{padding:48px 20px}
   .games-grid{grid-template-columns:1fr}
   .games-cta{padding:60px 20px}
+}
+@media(min-width:1600px){
+  .site-footer,.games-list{max-width:1480px;padding-left:72px;padding-right:72px}
+  .games-grid{gap:28px}
+  .page-hero{padding-left:72px;padding-right:72px}
 }
 </style>
 </head>
@@ -260,16 +273,16 @@
   </div>
   <div class="gb-rows">
     <div class="gb-row">
-      <img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt="">
-      <img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true">
+      <img src="assets/games/pegpals/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/hexashikaku/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt="">
+      <img src="assets/games/pegpals/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/hexashikaku/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true">
     </div>
     <div class="gb-row rev">
-      <img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt="">
-      <img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true">
+      <img src="assets/games/hexashikaku/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/pegpals/icon.jpg" alt="">
+      <img src="assets/games/hexashikaku/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/pegpals/icon.jpg" alt="" aria-hidden="true">
     </div>
     <div class="gb-row">
-      <img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt="">
-      <img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true">
+      <img src="assets/games/colorbomblink/icon.jpg" alt=""><img src="assets/games/castlebreak/icon.jpg" alt=""><img src="assets/games/carjammaster/icon.jpg" alt=""><img src="assets/games/fourcolorpuzzle/icon.jpg" alt=""><img src="assets/games/slimeconnect/icon.jpg" alt=""><img src="assets/games/clothjam/icon.jpg" alt=""><img src="assets/games/packjam/icon.jpg" alt=""><img src="assets/games/feedthedark/icon.jpg" alt=""><img src="assets/games/makeit10/icon.jpg" alt=""><img src="assets/games/snakemasterjam/icon.jpg" alt=""><img src="assets/games/stickmancoaster/icon.jpg" alt=""><img src="assets/games/officemayhem/icon.jpg" alt=""><img src="assets/games/monstermerge/icon.jpg" alt=""><img src="assets/games/pegpals/icon.jpg" alt=""><img src="assets/games/hexashikaku/icon.jpg" alt="">
+      <img src="assets/games/colorbomblink/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/castlebreak/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/carjammaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/fourcolorpuzzle/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/slimeconnect/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/clothjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/packjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/feedthedark/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/makeit10/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/snakemasterjam/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/stickmancoaster/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/officemayhem/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/monstermerge/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/pegpals/icon.jpg" alt="" aria-hidden="true"><img src="assets/games/hexashikaku/icon.jpg" alt="" aria-hidden="true">
     </div>
   </div>
   <div class="gb-fade"></div>
@@ -281,6 +294,23 @@
 <!-- GAMES -->
 <div class="games-list">
   <div class="games-grid">
+  <!-- Peg Pals -->
+  <a class="game-card" id="pegpals" href="game.html?id=pegpals">
+    <div class="gcard-meta">
+      <div class="gcard-top">
+        <img src="assets/games/pegpals/icon.jpg" alt="Peg Pals">
+        <div class="gcard-name-wrap">
+          <span class="gcard-genre">Puzzle · Peg Solitaire</span>
+          <span class="gcard-name">Peg Pals</span>
+        </div>
+      </div>
+    </div>
+    <div class="gcard-shot">
+      <img src="assets/games/pegpals/bg.jpg" alt="Peg Pals screenshot">
+      <p class="gcard-desc">An adorable animal puzzle where you jump pegs over each other to clear the exact creatures each level asks for. Unique grid shapes, handy Hint and Shuffle boosters, and a daily streak to keep you coming back.</p>
+    </div>
+  </a>
+
   <!-- Pack Jam 3D -->
   <a class="game-card" id="packjam" href="game.html?id=packjam">
     <div class="gcard-meta">
@@ -295,6 +325,23 @@
     <div class="gcard-shot">
       <img src="assets/games/packjam/bg.jpg" alt="Pack Jam 3D screenshot">
       <p class="gcard-desc">The ultimate item matching puzzle challenge. Find identical objects, match 3 of the same kind, and clear the board before the timer runs out. Hundreds of levels, tricky obstacles, and satisfying combos await.</p>
+    </div>
+  </a>
+
+  <!-- Hexa Shikaku -->
+  <a class="game-card" id="hexashikaku" href="game.html?id=hexashikaku">
+    <div class="gcard-meta">
+      <div class="gcard-top">
+        <img src="assets/games/hexashikaku/icon.jpg" alt="Hexa Shikaku">
+        <div class="gcard-name-wrap">
+          <span class="gcard-genre">Puzzle · Number Logic</span>
+          <span class="gcard-name">Hexa Shikaku</span>
+        </div>
+      </div>
+    </div>
+    <div class="gcard-shot">
+      <img src="assets/games/hexashikaku/bg.jpg" alt="Hexa Shikaku screenshot">
+      <p class="gcard-desc">A relaxing hexagon logic puzzle where every number is a clue. Fill the grid exactly right to clear each colorful board, with a cute cat companion cheering you on.</p>
     </div>
   </a>
 

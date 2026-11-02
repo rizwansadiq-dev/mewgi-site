@@ -17,7 +17,15 @@
       --text:#f1f0f5;--muted:#8b8a9e;
       --font:'Segoe UI',system-ui,-apple-system,sans-serif;
     }
-    body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+    body{
+      font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;
+      background-image:
+        radial-gradient(ellipse 900px 700px at 8% 0%, rgba(139,92,246,.11), transparent 60%),
+        radial-gradient(ellipse 900px 700px at 100% 35%, rgba(34,211,238,.08), transparent 60%),
+        radial-gradient(ellipse 800px 650px at 12% 100%, rgba(139,92,246,.07), transparent 60%);
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
     /* NAV */
     nav{
       position:sticky;top:0;z-index:200;
@@ -51,7 +59,7 @@
     /* FOOTER */
     .site-footer{
       border-top:1px solid var(--border);padding:40px 56px;
-      max-width:1200px;margin:0 auto;
+      max-width:1320px;margin:0 auto;
       display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;
     }
     .footer-brand{display:flex;align-items:center;gap:10px}
@@ -132,7 +140,7 @@
 .hero-stat .n{font-size:clamp(24px,3.5vw,36px);font-weight:900;color:#fff;letter-spacing:-1px}
 .hero-stat .l{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.3px}
 /* GAMES PREVIEW */
-.games-preview{padding:100px 56px;max-width:1200px;margin:0 auto}
+.games-preview{padding:100px 56px;max-width:1320px;margin:0 auto}
 .sec-eyebrow{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#a78bfa;margin-bottom:12px}
 .sec-title{font-size:clamp(26px,3.5vw,42px);font-weight:900;color:#fff;letter-spacing:-1.2px;line-height:1.1;margin-bottom:16px}
 .sec-sub{font-size:16px;color:var(--muted);line-height:1.75;max-width:480px;margin-bottom:52px}
@@ -190,7 +198,7 @@
 .game-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .game-foot{display:flex;align-items:center;justify-content:space-between}
 /* VALUES */
-.values-section{padding:100px 56px;max-width:1200px;margin:0 auto}
+.values-section{padding:100px 56px;max-width:1320px;margin:0 auto}
 .values-header{text-align:center}
 .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
 .val-card{
@@ -205,11 +213,12 @@
 .val-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:8px}
 .val-text{font-size:12px;color:var(--muted);line-height:1.65}
 /* CTA */
-.cta-wrap{padding:0 56px 100px}
+.cta-wrap{padding:0 56px 100px;max-width:1320px;margin:0 auto}
 .cta-box{
   border-radius:24px;padding:72px;text-align:center;position:relative;overflow:hidden;
   background:linear-gradient(135deg,#1a0a2e 0%,#0a1628 100%);
   border:1px solid rgba(139,92,246,.25);
+  max-width:860px;margin:0 auto;
 }
 .cta-box::before{
   content:'';position:absolute;inset:0;
@@ -229,6 +238,12 @@
 @media(max-width:480px){
   .values-grid{grid-template-columns:1fr}
   .hero-stats{gap:24px}
+}
+@media(min-width:1600px){
+  .site-footer,.games-preview,.values-section,.cta-wrap{max-width:1480px;padding-left:72px;padding-right:72px}
+  .games-grid{gap:28px}
+  .hero h1{max-width:920px}
+  .hero p{max-width:560px}
 }
 </style>
 </head>
@@ -290,6 +305,26 @@
   </div>
   <div class="games-grid">
 
+    <!-- Peg Pals -->
+    <a href="game.html?id=pegpals" class="game-card">
+      <div class="gcard-meta">
+        <div class="gcard-top">
+          <img src="assets/games/pegpals/icon.jpg" alt="Peg Pals">
+          <div class="gcard-name-wrap">
+            <span class="gcard-genre">Puzzle · Peg Solitaire</span>
+            <span class="gcard-name">Peg Pals</span>
+          </div>
+        </div>
+        <p class="gcard-desc">Jump playful animal pegs across the board to clear each level's goal. Simple moves, surprisingly deep puzzles.</p>
+      </div>
+      <div class="gcard-shot">
+        <img src="assets/games/pegpals/bg.jpg" alt="Peg Pals gameplay">
+      </div>
+      <div class="gcard-foot">
+        <span class="view-link">View Details →</span>
+      </div>
+    </a>
+
     <!-- Pack Jam 3D -->
     <a href="game.html?id=packjam" class="game-card">
       <div class="gcard-meta">
@@ -310,40 +345,20 @@
       </div>
     </a>
 
-    <!-- Feed the Dark -->
-    <a href="game.html?id=feedthedark" class="game-card">
+    <!-- Hexa Shikaku -->
+    <a href="game.html?id=hexashikaku" class="game-card">
       <div class="gcard-meta">
         <div class="gcard-top">
-          <img src="assets/games/feedthedark/icon.jpg" alt="Feed the Dark">
+          <img src="assets/games/hexashikaku/icon.jpg" alt="Hexa Shikaku">
           <div class="gcard-name-wrap">
-            <span class="gcard-genre">Idle · Clicker</span>
-            <span class="gcard-name">Feed the Dark</span>
+            <span class="gcard-genre">Puzzle · Number Logic</span>
+            <span class="gcard-name">Hexa Shikaku</span>
           </div>
         </div>
-        <p class="gcard-desc">Tap objects floating through space and feed them to a hungry black hole. Grow, expand, and consume the universe.</p>
+        <p class="gcard-desc">Fill the hexagon grid using number clues to solve each puzzle. A fresh, colorful twist on classic logic puzzles.</p>
       </div>
       <div class="gcard-shot">
-        <img src="assets/games/feedthedark/bg.jpg" alt="Feed the Dark gameplay">
-      </div>
-      <div class="gcard-foot">
-        <span class="view-link">View Details →</span>
-      </div>
-    </a>
-
-    <!-- Make it 10 -->
-    <a href="game.html?id=makeit10" class="game-card">
-      <div class="gcard-meta">
-        <div class="gcard-top">
-          <img src="assets/games/makeit10/icon.jpg" alt="Make it 10">
-          <div class="gcard-name-wrap">
-            <span class="gcard-genre">Puzzle · Math</span>
-            <span class="gcard-name">Make it 10</span>
-          </div>
-        </div>
-        <p class="gcard-desc">Draw lines to connect numbers that add up to 10. Easy to learn, surprisingly deep. A brain workout you'll crave.</p>
-      </div>
-      <div class="gcard-shot">
-        <img src="assets/games/makeit10/bg.jpg" alt="Make it 10 gameplay">
+        <img src="assets/games/hexashikaku/bg.jpg" alt="Hexa Shikaku gameplay">
       </div>
       <div class="gcard-foot">
         <span class="view-link">View Details →</span>

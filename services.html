@@ -17,7 +17,15 @@
       --text:#f1f0f5;--muted:#8b8a9e;
       --font:'Segoe UI',system-ui,-apple-system,sans-serif;
     }
-    body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+    body{
+      font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;
+      background-image:
+        radial-gradient(ellipse 900px 700px at 8% 0%, rgba(139,92,246,.11), transparent 60%),
+        radial-gradient(ellipse 900px 700px at 100% 35%, rgba(34,211,238,.08), transparent 60%),
+        radial-gradient(ellipse 800px 650px at 12% 100%, rgba(139,92,246,.07), transparent 60%);
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
     nav{
       position:sticky;top:0;z-index:200;
       background:rgba(10,10,15,0.85);
@@ -49,7 +57,7 @@
     .mobile-menu a{color:#fff;text-decoration:none;font-size:22px;font-weight:700}
     .site-footer{
       border-top:1px solid var(--border);padding:40px 56px;
-      max-width:1200px;margin:0 auto;
+      max-width:1320px;margin:0 auto;
       display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;
     }
     .footer-brand{display:flex;align-items:center;gap:10px}
@@ -136,9 +144,9 @@
   margin:0 auto;line-height:1.75;position:relative;z-index:1;
 }
 /* SERVICES GRID */
-.services-list{max-width:1200px;margin:0 auto;padding:80px 56px}
+.services-list{max-width:1320px;margin:0 auto;padding:80px 56px}
 .services-grid{
-  max-width:1120px;margin:0 auto;
+  max-width:1240px;margin:0 auto;
   display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
 }
 .service-card{
@@ -167,7 +175,7 @@
   padding:80px 56px;text-align:center;
 }
 .services-cta h2{font-size:clamp(22px,3vw,38px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:14px}
-.services-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7}
+.services-cta p{font-size:15px;color:var(--muted);margin-bottom:32px;line-height:1.7;max-width:460px;margin-left:auto;margin-right:auto}
 .services-cta .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 /* CLIENTS */
 .clients-section{background:var(--bg2);border-top:1px solid var(--border);padding:80px 0;overflow:hidden}
@@ -204,6 +212,11 @@
 }
 @media(max-width:480px){
   .services-grid{grid-template-columns:1fr}
+}
+@media(min-width:1600px){
+  .site-footer,.services-list{max-width:1480px;padding-left:72px;padding-right:72px}
+  .services-grid{max-width:1360px}
+  .page-hero{padding-left:72px;padding-right:72px}
 }
 </style>
 </head>
