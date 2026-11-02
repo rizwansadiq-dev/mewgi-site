@@ -4,6 +4,21 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title id="page-title">Game | Mewgi</title>
 <meta id="meta-desc" name="description" content="Explore Mewgi's mobile games.">
+<link rel="canonical" href="https://mewgi.com/games.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mewgi">
+<meta property="og:url" content="https://mewgi.com/games.html">
+<meta property="og:title" content="Our Games | Mewgi">
+<meta property="og:description" content="Explore Mewgi's portfolio of mobile games, loved by players worldwide.">
+<meta property="og:image" content="https://mewgi.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mewgi, mobile game development studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Games | Mewgi">
+<meta name="twitter:description" content="Explore Mewgi's portfolio of mobile games, loved by players worldwide.">
+<meta name="twitter:image" content="https://mewgi.com/assets/og-image.jpg">
+<meta name="theme-color" content="#0a0a0f">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0f'/%3E%3Ccircle cx='46' cy='14' r='3' fill='%238b5cf6'/%3E%3Cellipse cx='28' cy='38' rx='14' ry='16' fill='white'/%3E%3Cpolygon points='16,24 19,14 24,22' fill='white'/%3E%3Cpolygon points='28,22 33,13 37,22' fill='white'/%3E%3C/svg%3E">
 <style>
 
@@ -215,6 +230,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="games.html" class="active">Games</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="team.html">Team</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
@@ -227,6 +243,7 @@
   <li><a href="index.html" class="ml">Home</a></li>
   <li><a href="games.html" class="ml">Games</a></li>
   <li><a href="services.html" class="ml">Services</a></li>
+  <li><a href="team.html" class="ml">Team</a></li>
   <li><a href="index.html#about" class="ml">About</a></li>
   <li><a href="index.html#contact" class="ml">Contact</a></li>
   <li><a href="index.html#contact" class="nav-cta ml">Get in Touch</a></li>
@@ -283,6 +300,7 @@
     <a href="index.html">Home</a>
     <a href="games.html">Games</a>
     <a href="services.html">Services</a>
+    <a href="team.html">Team</a>
     <a href="index.html#about">About</a>
     <a href="index.html#contact">Contact</a>
   </div>
@@ -313,6 +331,24 @@
 
     document.title = game.name + ' | Mewgi';
     document.getElementById('meta-desc').setAttribute('content', game.about[0] || '');
+
+    // keep share/social tags in sync with the game being viewed
+    const shareTitle = game.name + ' | Mewgi';
+    const shareDesc = game.about[0] || '';
+    const shareUrl = 'https://mewgi.com/game.html?id=' + id;
+    const shareImg = 'https://mewgi.com/' + game.icon.replace(/icon\.jpg$/, 'bg.jpg');
+    const setMeta = (sel, val) => {
+      const el = document.querySelector(sel);
+      if (el) el.setAttribute(sel.startsWith('link') ? 'href' : 'content', val);
+    };
+    setMeta('meta[property="og:title"]', shareTitle);
+    setMeta('meta[property="og:description"]', shareDesc);
+    setMeta('meta[property="og:url"]', shareUrl);
+    setMeta('meta[property="og:image"]', shareImg);
+    setMeta('meta[name="twitter:title"]', shareTitle);
+    setMeta('meta[name="twitter:description"]', shareDesc);
+    setMeta('meta[name="twitter:image"]', shareImg);
+    setMeta('link[rel="canonical"]', shareUrl);
 
     const iconEl = document.getElementById('d-icon');
     iconEl.src = game.icon;
